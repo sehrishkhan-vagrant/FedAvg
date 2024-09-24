@@ -4,14 +4,20 @@ import os
 import copy
 import torch
 import wandb
-
-
 class Logger:
     def __init__(self, args):
         self.args = args
-        if args.wandb:
-            wandb.init(project=args.wandb_project, name=args.exp_name, config=args)
+        self.wandb = None  # Make sure this line exists
+
+        # Add other initializations as needed
+        if self.args.wandb:  # Assuming you want to use wandb
+            import wandb
+            wandb.init(project=args.project_name)
             self.wandb = wandb
+
+
+
+
 
     def log(self, logs: Dict[str, Any]) -> None:
         if self.wandb:
