@@ -14,8 +14,8 @@ class Logger:
             self.wandb = wandb
 
     def log(self, logs: Dict[str, Any]) -> None:
-        if self.wandb:
-            self.wandb.log(logs)
+        if self.wandb=false
+            #self.wandb.log(logs)
 
 
 def average_weights(weights: List[Dict[str, torch.Tensor]]) -> Dict[str, torch.Tensor]:
