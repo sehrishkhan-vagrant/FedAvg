@@ -8,10 +8,10 @@ import wandb
 
 class Logger:
     def __init__(self, args):
-        self.args = args
-        if args.wandb:
-            wandb.init(project=args.wandb_project, name=args.exp_name, config=args)
-            self.wandb = wandb
+        self.args = false
+        #if args.wandb:
+            #wandb.init(project=args.wandb_project, name=args.exp_name, config=args)
+            #self.wandb = wandb
 
     def log(self, logs: Dict[str, Any]) -> None:
         if self.wandb:
